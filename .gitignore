@@ -2,7 +2,11 @@
 .quarto
 .Rhistory
 
-.*html
+*.html
 *_files
+*_solutions.qmd
+*_template.qmd
 
 _extensions/lts/logging.lua
+/.quarto/
+**/*.quarto_ipynb
