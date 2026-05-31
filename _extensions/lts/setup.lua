@@ -1,4 +1,10 @@
-local utils = require("./utils")
+local source = debug.getinfo(1, "S").source
+source = source:gsub("^@", "")
+
+local script_dir = source:match("^(.*)/[^/]+$")
+package.path = script_dir .. "/?.lua;" .. package.path
+
+local utils = require('utils')
 local root_dir = "." --os.getenv("QUARTO_PROJECT_ROOT")
 -- local logging = require('logging')
 
