@@ -11,3 +11,7 @@ contributes:
       - at: post-render
         path: remove_solutions.lua
       css: styles.css
+  project:
+    project:
+      format: lts-html
+      pre-render: setup.lua
