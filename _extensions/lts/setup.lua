@@ -1,6 +1,6 @@
-local utils = require("_extensions/lts/utils")
+local utils = require("./utils")
 local root_dir = "." --os.getenv("QUARTO_PROJECT_ROOT")
-local logging = require('_extensions/lts/logging')
+-- local logging = require('logging')
 
 local function create_template(doc)
 
