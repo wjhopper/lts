@@ -1,0 +1,73 @@
+:root {
+  --bs-body-font-size: 1.1rem;
+  font-size: var(--bs-body-font-size);
+}
+
+/* Stolen from 
+https://raw.githubusercontent.com/OpenIntroStat/oilabs-tidy/main/lab.css
+*/
+
+body {
+    counter-reset: li; /* initialize counter named li */
+}
+
+h4 {
+  font-weight: 600;  
+}
+
+h6 {
+  display: none;
+}
+
+.question {
+    background: rgba(49, 126, 172, 0.1);
+}
+
+section.question {
+  padding-bottom: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;5px;
+}
+
+section.question > :not(h2) {
+  padding-left: 30px;
+}
+
+
+section.question h2 {
+  margin-left: 0px;
+  padding: 5px;
+  background:#002855; /* Smith blue */
+  color:#fff;
+  font-weight:bold;
+  font-family:"Helvetica Neue", Arial, sans-serif;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.hex {
+    width: 100px;
+    float: right;
+    margin-left: 10px;
+}
+
+.nav-footer, .nav-footer-left, .nav-footer-center, .nav-footer-right {
+  min-height: 1.5em;
+}
+
+.filename {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  color: black;
+  background-color: #f8f9fa;
+  padding: .2em;
+  border-radius: 5px;
+}
+  
+div.question div.sourceCode {
+  border: 3px solid white;
+  padding: 10px;
+}  
+
+.cell-output-error code {
+  color: red;
+}

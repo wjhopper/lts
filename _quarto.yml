@@ -1,0 +1,6 @@
+project:
+  output-dir: .
+  pre-render: _extensions/lts/setup.lua
+format:
+  html:
+    css: _extensions/lts/styles.css

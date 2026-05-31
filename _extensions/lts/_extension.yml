@@ -1,0 +1,13 @@
+title: lts
+author: Will Hopper
+version: 1.0.0
+quarto-required: ">=1.9.0"
+contributes:
+  formats:
+    html:
+      filters:
+      - at: pre-ast
+        path: question_header.lua
+      - at: post-render
+        path: remove_solutions.lua
+      css: styles.css

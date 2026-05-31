@@ -1,0 +1,8 @@
+.Rproj.user/
+.quarto
+.Rhistory
+
+.*html
+*_files
+
+_extensions/lts/logging.lua

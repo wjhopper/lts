@@ -1,0 +1,74 @@
+---
+title: "Lab 1: Getting Acquainted with R, RStudio and Quarto"
+editor: source
+format: 
+  lts-html:
+    preserve-md: false
+    preserve-chunk-opts: false
+---
+
+::: {.callout-important}
+## Lab Goals
+
+The purpose of this lab is to introduce you to working with R and with resources and techniques for problem solving while using R.
+
+After completing this lab, you should understand:
+
+-   The RStudio interface
+-   How to use `r fontawesome::fa("r-project", fill = "steelblue")` as a calculator
+-   How to store the results of your calculations as **objects** in the `r fontawesome::fa("r-project", fill = "steelblue")` environment
+-   How to interpret error messages from `r fontawesome::fa("r-project", fill = "steelblue")`
+-   How to find the built-in help resources in `r fontawesome::fa("r-project", fill = "steelblue")`
+-   Identify working directories and navigate file paths
+:::
+
+## R as a calculator
+
+The first thing you can try to do with R is a familiar one - simply use it like a calculator. It is easy to forget because of all the *other* things it can do, but R at the lowest level is still just working with numbers.
+
+::: question
+In the Console, enter `5 + 2` and press <kbd>Enter</kbd> to run the code.
+:::
+
+::: solution
+You should see the following output in your console:
+
+```{r}
+5 + 2
+```
+:::
+
+## Storing information in objects
+
+Right now, the outputs of our code (in this case, the number 7) are just being shown to us. That can be helpful, but isn't really the point of a programming language. We want to be able to save our results and build on them as we go. We can do that by assigning the output of the code we run into an *object*.
+
+You can think of *objects* as boxes that store things. To create an object, we have to ask R to take the results of some code and *assign* those results to an object. We can do this using the **assignment operator** `<-`, which is often called the arrow. In your code, you write the assignment operator iby typing in the "less than" symbol, followed by a dash.
+
+::: question
+In the console, type in `result <- 5 + 2` and press <kbd>Enter</kbd> to run the code.
+
+Then, type in `applesauce <- 10 * 3` in the console and press <kbd>Enter</kbd> to run the code.
+
+Then, write an answer the following questions in your Lab 2 Quarto document:
+
+- What happens in the RStudio "Environment" pane when you use the assignment operator to create a new object?
+- What *doesn't* happen in the console when you use the assignment operator to create a new object?
+:::
+
+::: solution
+- The name of each object is shown, along with its computed value.
+- The computed result is *not* printed out
+:::
+
+::: question
+In your template file, locate the code chunk that looks like this:
+
+```{r}
+#| echo: fenced
+result <- 5 + 2
+applesauce <- 10 * 3
+```
+
+Write the command `result + applesauce` on the blank line at the end of the code chunk. Then click the green triangle "play" button in the upper right hand corner of the code chunk to execute the code in the chunk.
+:::
+
