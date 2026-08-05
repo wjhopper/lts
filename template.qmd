@@ -72,3 +72,13 @@ applesauce <- 10 * 3
 Enter a blank line at the end of this code chunk, and write the command `result + applesauce` on the blank line. Then click the green triangle "play" button in the upper right hand corner of the code chunk to execute the code in the chunk. What is the result?
 :::
 
+::: solution
+```{r}
+#| echo: fenced
+result <- 5 + 2
+applesauce <- 10 * 3
+result + applesauce
+```
+
+The output is 37 - the same value you would get if you ran `5 + 2` + `10 * 3` in the console!
+:::
