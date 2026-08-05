@@ -13,5 +13,8 @@ contributes:
       css: styles.css
   project:
     project:
-      format: lts-html
-      pre-render: setup.lua
+      type: default
+      pre-render: setup.lua      
+    format:
+      html:
+        css: styles.css            
