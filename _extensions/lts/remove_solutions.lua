@@ -1,6 +1,6 @@
 function Div(div)
   
-  if div.classes:includes("solution") then
+  if div.classes:includes("solution") and not div.classes:includes("question") then
   
     return {}
   

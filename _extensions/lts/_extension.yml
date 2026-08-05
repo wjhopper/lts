@@ -1,6 +1,6 @@
 title: lts
 author: Will Hopper
-version: 1.0.0
+version: 1.0.1
 quarto-required: ">=1.9.0"
 contributes:
   formats:
