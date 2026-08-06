@@ -22,6 +22,10 @@ utils.file_exists = function(path)
   return false
 end
 
+utils.shell_quote = function(s)
+  return "'" .. s:gsub("'", "'\\''") .. "'"
+end
+
 -- Searches recursively for files with .qmd extension
 utils.find_qmd_files = function(root)
 
@@ -31,13 +35,16 @@ utils.find_qmd_files = function(root)
 
   if package.config:sub(1,1) == "\\" then
     -- Windows
-    cmd = 'dir "' .. root .. '" /s /b *.qmd'
+    cmd = 'dir /s /b ' .. '"' .. root:gsub('"', '\\"') .. '\\*.qmd"'
   else
     -- Unix/macOS/Linux
-    cmd = 'find "' .. root .. '" -type f -name "*.qmd"'
+    cmd = 'find ' .. utils.shell_quote(root) .. ' -type f -name "*.qmd"'
   end
 
-  local pipe = io.popen(cmd)
+  local pipe, err = io.popen(cmd)
+  if not pipe then
+    error("Could not run command: " .. tostring(err))
+  end
 
   for line in pipe:lines() do
     table.insert(files, line)
