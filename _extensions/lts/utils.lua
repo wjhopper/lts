@@ -283,10 +283,6 @@ utils.extract_solutions = function(doc)
 
   local function collect(el)
 
-    if not el.classes:includes("solution") then
-      return nil
-    end
-
     if el.classes:includes("question") then
 
       -- Collect only the code blocks
@@ -296,9 +292,9 @@ utils.extract_solutions = function(doc)
         end
       })
 
-      return nil
+    end
 
-    else
+    if el.classes:includes("solution") then
 
       q_num = q_num + 1
       local question_header = { pandoc.Str("Question " .. q_num) }
@@ -306,10 +302,11 @@ utils.extract_solutions = function(doc)
 
       el.classes = {"question"}
       table.insert(question_blocks, el)
-      return el
 
     end
 
+    return nil
+  
   end
 
   pandoc.walk_block(

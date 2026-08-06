@@ -60,7 +60,7 @@ Then, write an answer the following questions in your Lab 1 Quarto document:
 - The computed result is *not* printed out
 :::
 
-::: {.question .solution}
+::: question
 In your template file, locate the code chunk that looks like this:
 
 ```{r}
@@ -74,7 +74,6 @@ Enter a blank line at the end of this code chunk, and write the command `result 
 
 ::: solution
 ```{r}
-#| echo: fenced
 result + applesauce
 ```
 
